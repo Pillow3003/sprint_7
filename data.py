@@ -31,3 +31,13 @@ class Orders:
             "BLACK"
         ]
     }
+
+
+class Courier:
+    response_create_ok = {"ok": True}
+    response_create_duplicate = {"message": "Этот логин уже используется"}
+    response_create_not_full_data = {"message": "Недостаточно данных для создания учетной записи"}
+
+    response_login_negative = {"message": "Учетная запись не найдена"}
+    response_login_not_full_data = {"message": "Недостаточно данных для входа"}
+
