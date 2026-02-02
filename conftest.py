@@ -13,7 +13,7 @@ def cancel_order():
 
 @pytest.fixture
 def remove_courier():
-    Handle.create_courier(request_body=register_new_courier)
+    Handle.create_courier(request_body=register_new_courier())
     response = Handle.login_courier(request_body=Users.data_current())
     courier_id = response.json().get("id")
     yield
